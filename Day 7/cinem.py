@@ -1,18 +1,14 @@
 def choose_movie():
+    movies = ['The Avengers', 'The Dark Knight', 'The Dark Knight Rises', 'Jocker']
     print('Choose a movie: ')
-    print('1. The Avengers')
-    print('2. The Dark Knight')
-    print('3. The Dark Knight Rises')
+    for i in range(len(movies)):
+        print(f'{i + 1} - {movies[i]}')
 
     choice = int(input('Enter the option: '))
-    if choice == 1:
-        return 'The Avengers'
-    elif choice == 2:
-        return 'The Dark Knight'
-    elif choice == 3:
-        return 'The Dark Knight Rises'
-    else:
+    if choice > 3 or choice < 1:
         return None
+    else:
+        return movies[choice - 1]
 
 def choose_tickets():
     print('Choose seat type:')
